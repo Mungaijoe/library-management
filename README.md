@@ -15,3 +15,10 @@ The main features that have currently been implemented are:
 ![Screenshot from 2024-06-03 13-14-13](https://github.com/Mungaijoe/library-management/assets/124779641/76062a43-c539-4afc-95cb-10e3e315cee7)
 
 ![Screenshot from 2024-06-06 14-08-34](https://github.com/Mungaijoe/library-management/assets/124779641/a76fc28e-47e1-4865-9890-d051bdc7541a)
+#
+How to run the program
+#
+
+1. setup a python environment.
+2. run the code python manage.py runserver 8080.
+3. open the link provided in the terminal.
