@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sumit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <div class="container-flex text-center justify-content-center align-items-center" style="padding-top: 10px; padding-bottom: 20px; vertical-align: middle">
+
+          <div class="row">
+
+
+
+                  <div class="container" style="overflow-y:auto; height: 600px; background-color: #b6bde7;">
+
+                <form class="d-flex" action="/add_book/add" method="POST">
+                    {% csrf_token %}
+
+
+                    <table class="table" style="margin-top: 20px; border-radius: 0.4rem;">
+                        <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Title: </td>
+                            <td><input type="text" class="form-control" name="book_name"></td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">ISBN: </td>
+                            <td><input type="text" class="form-control" name="book_isbn"></td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Author: </td>
+                            <td><input type="text" class="form-control" name="book_author"></td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Summary: </td>
+                            <td><textarea class="form-control" name="book_summary"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><button class="secondary" type="submit">Add Book</button></td>
+                        </tr>
+
+                    </table>
+                </form>
+<div class="text-center">View Available Book In Library<a href="viewbooks">Click here</a></div>
+
+            </div>
+          </div>
+      </div>
+
+{% endblock %}
+
+

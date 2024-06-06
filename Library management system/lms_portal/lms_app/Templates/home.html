@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+<main role="main">
+
+<div class="jumbotron">
+    <div class="container">
+        <img src="{% static 'large.png' %}" class="rounded float-start" alt="LMS" height="400" style="margin-right: 10px;" >
+        <h1 class="display-5">Welcome to our library</h1>
+
+        <p>welcome to Joe's library.We offer a large variety of books which cover various topics and intrests. Our aim is to empower communities through knowledge and education </p>
+        <p><a role="button" href="/admin/login/?next=/admin/" class="btn btn-secondary btn-lg ">Get started</a></p>
+
+
+    </div>
+
+</div><hr>
+      <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h1>why is reading important</h1>
+                <p>Reading is important because it develops your mind and gives you excessive knowledge and lessons of life. It helps you understand the world around you better. It keeps your mind active and enhances your creative ability. Communication Skills: Reading improves your vocabulary and develops your communication skills.</p>
+            </div>
+            <div class="col">
+                <h1 >Key benefis</h1>
+                <ul style="text-align: left; vertical-align: middle; padding: 15px;">
+                    <li>Improve confidence</li>
+                    <li>Become kowledgable</li>
+                    <li>Enhace competence</li>
+                    <li>Be an entreprenuer</li>
+                </ul>
+            </div>
+            <hr>
+
+        </div>
+      </div>
+</main>
+
+ <footer class="container">
+
+
+  <p>
+  <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+  <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+  <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+  <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+  </p>
+     <p>© copyright 2024</p>
+
+ </footer>
+
+{% endblock %}

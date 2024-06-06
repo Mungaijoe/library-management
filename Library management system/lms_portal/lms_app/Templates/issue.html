@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+<div class="row " style="margin-top: 20px;">
+            <div class="container" style="overflow-y: auto;height:400px ">
+                <table class="table table-hover">
+                    <thead style="background-color: #1CDBB6;">
+                    <tr>
+                        <td>Reader Name</td>
+                        <td>Title</td>
+                        <td>Author</td>
+                        <td>Status</td>
+                        <td>Due date</td>
+
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    {% for instance in instances %}
+                    <tr>
+                        <td>{{instance.reader_name}}</td>
+                        <td>{{instance.title}}</td>
+                        <td>{{instance.author}}</td>
+                        <td>{{instance.status}}</td>
+                        <td>{{instance.due_back}}</td>
+
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+<div class="text-center">Return book<a href="return_b">Click here</a></div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+
+
+<html>
+<head>
+    <title>Return Book</title>
+</head>
+<body>
+    <h1>Return Book</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="book_instance_id">Book Instance ID:</label>
+        <input type="text" id="book_instance_id" name="book_instance_id" required>
+        <button type="submit">Return Book</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+ <div class="row " style="margin-top: 20px;">
+            <div class="container" style="overflow-y: auto;height:400px ">
+                <table class="table table-hover">
+                    <thead style="background-color: #1CDBB6;">
+                    <tr>
+                        <td>Read</td>
+                        <td>Title</td>
+                        <td>Author</td>
+                        <td>Isbn</td>
+                        <td>summary</td>
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    {% for book in books %}
+                    <tr>
+                        <td>{{book.id}}</td>
+                        <td>{{book.title}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.isbn}}</td>
+                        <td>{{book.summary}}</td>
+
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+</div>
+{% endblock %}

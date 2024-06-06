@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+<div class="container-flex text-center justify-content-center align-items-center" style="padding-top: 10px; padding-bottom: 20px; vertical-align: middle">
+
+    <div class="row">
+
+<div class="container" style="overflow-y:auto; height: 600px; background-color: #76D7C4;">
+                <form class="d-flex" action="/readers/add" method="POST">
+                    {% csrf_token %}
+
+                    <table class="table" style="margin-top: 20px; border-radius: 0.4rem;">
+                        <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Name : </td>
+                            <td><input type="text" class="form-control" name="reader_name"></td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Contact : </td>
+                            <td><input type="text" class="form-control" name="reader_contact"></td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Reference Id : </td>
+                            <td><input type="text" class="form-control" name="reader_reference_id"></td>
+                        </tr>
+                         <tr>
+                            <td style="text-align: left; vertical-align:middle; padding-left: 15px;">Address : </td>
+                            <td><textarea class="form-control" name="reader_address"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><button class="btn btn-primary" type="submit">save</button></td>
+                        </tr>
+
+                    </table>
+                </form>
+
+
+            </div>
+    </div>
+</div>
+{% endblock %}

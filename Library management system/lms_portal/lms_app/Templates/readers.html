@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content %}
+
+<div class="container-flex text-center justify-content-center align-items-center" style="padding-top: 10px; padding-bottom: 20px; vertical-align: middle">
+    <div class="row justify-content-center align-middle" style="margin-top: 10px;height: 60px;">
+        <div class="col-md-8">
+            <h4>Search Members</h4>
+        </div>
+    </div>
+
+
+
+            <div class="row">
+                <nav class="navbar bg-body-light" style="padding-top: 20px; padding-bottom: 20px;">
+
+                    <div class="container-fluid justify-content-center align-items-center">
+
+                        <form class="d-flex" role="search">
+
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+
+                        </form>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="row" style="margin-top: 20px">
+                <p>{{readers|length}} readers subscribed</p>
+            </div>
+            <div class="row " style="margin-top: 20px;">
+            <div class="container" style="overflow-y: auto;height:400px">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <td>Reader ID</td>
+                        <td>Name</td>
+                        <td>Contact</td>
+                        <td>Reference ID</td>
+                        <td>Address</td>
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    {% for reader in readers %}
+                    <tr>
+                        <td>{{reader.id}}</td>
+                        <td>
+                            {% if reader.active %}
+                            <span class="btn btn-success">{{reader.reader_name}}</span>
+                            {% else %}
+                            <span class="btn btn-seconday">{{reader.reader_name}}</span>
+                            {% endif %}
+
+
+
+                        </td>
+                        <td>{{reader.reader_contact}}</td>
+                        <td>{{reader.reference_id}}</td>
+                        <td>{{reader.reader_address}}</td>
+
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+<div class="text-center">Add a member<a href="members">Click here</a></div>
+
+</div>
+{% endblock %}
