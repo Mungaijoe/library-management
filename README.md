@@ -13,3 +13,5 @@ The main features that have currently been implemented are:
 ![Screenshot from 2024-06-03 12-04-46](https://github.com/Mungaijoe/library-management/assets/124779641/e512e28c-1736-4026-b4ca-e0ae24206ebe)
 
 ![Screenshot from 2024-06-03 13-14-13](https://github.com/Mungaijoe/library-management/assets/124779641/76062a43-c539-4afc-95cb-10e3e315cee7)
+
+![Screenshot from 2024-06-06 14-08-34](https://github.com/Mungaijoe/library-management/assets/124779641/a76fc28e-47e1-4865-9890-d051bdc7541a)
