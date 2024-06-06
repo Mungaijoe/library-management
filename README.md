@@ -7,4 +7,6 @@ The main features that have currently been implemented are:
 * The librarian can append books and track borrowed books.
 
 # here is the ui of the system
+
+![Screenshot from 2024-06-03 11-52-31](https://github.com/Mungaijoe/library-management/assets/124779641/339d2a50-0f92-4571-87c7-ccf8c151b727)
  
